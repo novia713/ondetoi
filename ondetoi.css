@@ -1,0 +1,35 @@
+html, body { font-size: 10px; margin: 0; padding: 0; background-color: #eefdff}
+
+section[role="region"] > header:first-child {
+    background: #cbe1e1;
+
+}
+
+section[role="region"] > header:first-child button{
+    background: #cbe1e1;
+    color: #00b8d6;
+}
+
+section[role="region"] > header:first-child menu[type="toolbar"] button:hover  {
+  background-color: #eefdff !important;
+}
+
+section[role="region"] > header:first-child menu[type="toolbar"] a:hover  {
+  background-color: #eefdff !important;
+}
+
+section[role="region"] > header:first-child a:hover  {
+  background-color: #eefdff !important;
+}
+
+h1 {color: #00b8d6 !important}
+
+
+
+#que { width: 100%; height: 3em; background-color: #eefdff}
+
+
+
+.icon-back {
+background-image: url('style/headers/images/icons/organic/back.png') !important;
+}

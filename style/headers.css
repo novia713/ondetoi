@@ -137,7 +137,7 @@ section[role="region"] > header:first-child menu[type="toolbar"] a:not([aria-dis
 section[role="region"] > header:first-child menu[type="toolbar"] button:not(:disabled):hover,
 section[role="region"] > header:first-child menu[type="toolbar"] a:not([aria-disabled="true"]):active,
 section[role="region"] > header:first-child menu[type="toolbar"] button:not(:disabled):active  {
-  background-color: #dc6a0e !important;
+  background-color: #dc6a0e;
 }
 
 /* Disabled state */

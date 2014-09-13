@@ -22,7 +22,7 @@ request.onerror = function() {
 
 
 
-var app_token = "bf0b5fbe7f5ce0221ad5defcf295eKKK";
+var app_token = "bf0b5fbe7f5ce0221ad5defcf295e4d1";
 var lat = "";
 var lon = "";
 var map = null;
@@ -105,7 +105,7 @@ $(document).ready(function() {
         lat = position.coords.latitude;
         lon = position.coords.longitude;
 
-        $('#info_sup').html("<small>" + lat + ", " + lon + "</small>");
+        $('#info_sup').html("<small><small>" + lat + ", " + lon + "</small></small>");
         call('bar');
         $("#que").on("change", function() {
             paint_markers(this.value, lat, lon, app_token, map);
