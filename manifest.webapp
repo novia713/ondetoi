@@ -1,0 +1,25 @@
+{
+  "version": "0.21",
+  "name": "Ondetoi",
+  "description": "Te localiza en el mapa y permite consultar establecimientos cercanos",
+  "launch_path": "/index.html",
+  "icons": {
+    "30":  "/icons/ondetoi/30.png",
+    "60":  "/icons/ondetoi/60.png",
+    "90":  "/icons/ondetoi/90.png",
+    "128": "/icons/ondetoi/128.png"
+  },
+  "developer": {
+    "name": "Leandro",
+    "url": "http://leandro.org"
+  },
+  "default_locale": "es",
+  "permissions": {
+    "geolocation": {
+        "description" : "Para localizarme en el mapa"
+    }
+   },
+  "installs_allowed_from": ["*"],
+  "fullscreen": "true"
+}
+
