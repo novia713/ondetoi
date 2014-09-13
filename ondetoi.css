@@ -14,10 +14,40 @@ section[role="region"] > header:first-child menu[type="toolbar"] button:hover  {
   background-color: #eefdff !important;
 }
 
+section[role="region"].skin-organic > header:first-child > a:not([aria-disabled="true"]):active:after,
+.skin-organic section[role="region"] > header:first-child > a:not([aria-disabled="true"]):active:after,
+section[role="region"].skin-organic > header:first-child > button:not(:disabled):active:after,
+.skin-organic section[role="region"] > header:first-child > button:not(:disabled):active:after,
+section[role="region"].skin-organic > header:first-child > a:not([aria-disabled="true"]):hover:after,
+.skin-organic section[role="region"] > header:first-child > a:not([aria-disabled="true"]):hover:after,
+section[role="region"].skin-organic > header:first-child > button:not(:disabled):hover:after,
+.skin-organic section[role="region"] > header:first-child > button:not(:disabled):hover:after,
+section[role="region"].skin-organic > header:first-child menu[type="toolbar"] a:not([aria-disabled="true"]):hover,
+.skin-organic section[role="region"] > header:first-child menu[type="toolbar"] a:not([aria-disabled="true"]):hover,
+section[role="region"].skin-organic > header:first-child menu[type="toolbar"] button:not(:disabled):hover,
+.skin-organic section[role="region"] > header:first-child menu[type="toolbar"] button:not(:disabled):hover,
+section[role="region"].skin-organic > header:first-child menu[type="toolbar"] a:not([aria-disabled="true"]):active,
+.skin-organic section[role="region"] > header:first-child menu[type="toolbar"] a:not([aria-disabled="true"]):active,
+section[role="region"].skin-organic > header:first-child menu[type="toolbar"] button:not(:disabled):active,
+.skin-organic section[role="region"] > header:first-child menu[type="toolbar"] button:not(:disabled):active  {
+  background-color: #eefdff !important;
+}
+
+
+section[role="region"] > header:first-child > a:not([aria-disabled="true"]):active:after,
+section[role="region"] > header:first-child > button:not(:disabled):active:after,
+section[role="region"] > header:first-child > a:not([aria-disabled="true"]):hover:after,
+section[role="region"] > header:first-child > button:not(:disabled):hover:after,
+section[role="region"] > header:first-child menu[type="toolbar"] a:not([aria-disabled="true"]):hover,
+section[role="region"] > header:first-child menu[type="toolbar"] button:not(:disabled):hover,
+section[role="region"] > header:first-child menu[type="toolbar"] a:not([aria-disabled="true"]):active,
+section[role="region"] > header:first-child menu[type="toolbar"] button:not(:disabled):active,
+section[role="region"] > header:first-child menu[type="toolbar"] a:active,
 section[role="region"] > header:first-child menu[type="toolbar"] a:hover  {
   background-color: #eefdff !important;
 }
 
+section[role="region"] > header:first-child a:active,
 section[role="region"] > header:first-child a:hover  {
   background-color: #eefdff !important;
 }
