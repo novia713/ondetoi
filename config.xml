@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.phonegap.ondetoi"
+        versionCode = "10"
+        version     = "0.31" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Ondetoi</name>
+
+    <description>
+        An example for phonegap build docs.
+    </description>
+
+    <author href="https://leandro.org" email="leandro@leandro.org">
+        Leandro
+    </author>
+
+    <!--
+      If you do not want any permissions to be added to your app, add the
+      following tag to your config.xml; you will still have the INTERNET
+      permission on your app, which PhoneGap requires.
+    -->
+    <preference name="permissions" value="none"/>
+
+    <!-- to enable individual permissions use the following examples -->
+    <feature name="http://api.phonegap.com/1.0/geolocation"/>
+    <feature name="http://api.phonegap.com/1.0/network"/>
+</widget>
