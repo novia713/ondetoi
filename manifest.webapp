@@ -19,7 +19,6 @@
         "description" : "Para localizarme en el mapa"
     }
    },
-  "installs_allowed_from": ["*"],
-  "fullscreen": "true"
+  "installs_allowed_from": ["*"]
 }
 
