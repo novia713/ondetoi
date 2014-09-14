@@ -1,23 +1,27 @@
-const manifest_url = "http://ondetoi.leandro.org/manifest.webapp";
+var isFFOS = ("mozApps" in navigator && navigator.userAgent.search("Mobile") != -1);
 
-function install() {
-    var myapp = navigator.mozApps.install(manifest_url);
-    myapp.onsuccess = function(data) {
-        console.log("App instalada");
-    };
-    myapp.onerror = function() {
-        alert("Error installing the app: " + this.error.name);
-    };
-};
+    if ( isFFOS ) {
+    const manifest_url = "http://ondetoi.leandro.org/manifest.webapp";
 
-var request = navigator.mozApps.checkInstalled(manifest_url);
-request.onsuccess = function() {
-    if (!request.result)
-        install();
-};
-request.onerror = function() {
-    alert('Error checking installation status: ' + this.error.message);
-};
+    function install() {
+        var myapp = navigator.mozApps.install(manifest_url);
+        myapp.onsuccess = function(data) {
+            console.log("App instalada");
+        };
+        myapp.onerror = function() {
+            alert("Error installing the app: " + this.error.name);
+        };
+    };
+
+    var request = navigator.mozApps.checkInstalled(manifest_url);
+    request.onsuccess = function() {
+        if (!request.result)
+            install();
+    };
+    request.onerror = function() {
+        alert('Error checking installation status: ' + this.error.message);
+    };
+}
 
 
 
@@ -104,6 +108,7 @@ $(document).ready(function() {
     navigator.geolocation.getCurrentPosition(function(position) {
         lat = position.coords.latitude;
         lon = position.coords.longitude;
+        console.log("lon" + lon);
 
         $('#info_sup').html("<small><small>" + lat + ", " + lon + "</small></small>");
         call('bar');
