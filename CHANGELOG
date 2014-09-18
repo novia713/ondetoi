@@ -4,5 +4,6 @@ v. 0.11 - initial version 20140908
 v. 0.21 - added icons provided by @FabianOvrWrt 20140912
 v. 0.31 - added new colors, icons [http://buildingfirefoxos.com/building-blocks/icon-font.html] 20140913
 v. 0.32 - added code for install the app only in Firefox browser, get rid full screen & minor fixes. added config.xml for Phonegap.
+v. 0.34 - errores js de geolocalización en alert, marker rojo en fichero local, opciones de búsqueda: whiskería, farmacia, gimnasio 20140918
 
 

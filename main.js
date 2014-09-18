@@ -45,7 +45,8 @@ $(document).ready(function() {
 
         var RedIcon = L.Icon.Default.extend({
             options: {
-                iconUrl: 'http://stuff.samat.org/Test-Cases/Leaflet/881-Marker-Subclassing/marker-icon-red.png'
+                //iconUrl: 'http://stuff.samat.org/Test-Cases/Leaflet/881-Marker-Subclassing/marker-icon-red.png'
+                iconUrl: 'icons/map/select-marker.png'
             }
         });
         var redIcon = new RedIcon();
@@ -105,17 +106,29 @@ $(document).ready(function() {
         });
     }
 
-    navigator.geolocation.getCurrentPosition(function(position) {
-        lat = position.coords.latitude;
-        lon = position.coords.longitude;
-        console.log("lon" + lon);
+    var options = {
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 0
+    };
 
-        $('#info_sup').html("<small><small>" + lat + ", " + lon + "</small></small>");
-        call('bar');
-        $("#que").on("change", function() {
-            paint_markers(this.value, lat, lon, app_token, map);
-        });
+    navigator.geolocation.getCurrentPosition(
+        function(position) {
+            lat = position.coords.latitude;
+            lon = position.coords.longitude;
+            console.log("lon " + lon);
 
-    });
+            $('#info_sup').html("<small><small>" + lat + ", " + lon + "</small></small>");
+            call('bar');
+            $("#que").on("change", function() {
+                paint_markers(this.value, lat, lon, app_token, map);
+            });
+
+        },
+        function(error) {
+            alert('OndeToi ERROR(' + error.code + '): ' + error.message);
+        }, options
+
+    );
 
 });
