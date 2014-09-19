@@ -1,24 +1,23 @@
-var isFFOS = ("mozApps" in navigator && navigator.userAgent.search("Mobile") != -1);
+var isFFOS = ("mozApps" in navigator && navigator.userAgent.search("Mobile") !== -1);
 
-    if ( isFFOS ) {
-    const manifest_url = "http://ondetoi.leandro.org/manifest.webapp";
+if (isFFOS) {
+    var MANIFEST_URL = "http://ondetoi.leandro.org/manifest.webapp";
 
     function install() {
-        var myapp = navigator.mozApps.install(manifest_url);
-        myapp.onsuccess = function(data) {
+        var myapp = navigator.mozApps.install(MANIFEST_URL);
+        myapp.onsuccess = function (data) {
             console.log("App instalada");
         };
-        myapp.onerror = function() {
+        myapp.onerror = function () {
             alert("Error installing the app: " + this.error.name);
         };
-    };
+    }
 
-    var request = navigator.mozApps.checkInstalled(manifest_url);
-    request.onsuccess = function() {
-        if (!request.result)
-            install();
+    var request = navigator.mozApps.checkInstalled(MANIFEST_URL);
+    request.onsuccess = function () {
+        if (!request.result) install();
     };
-    request.onerror = function() {
+    request.onerror = function () {
         alert('Error checking installation status: ' + this.error.message);
     };
 }
@@ -33,7 +32,7 @@ var map = null;
 var assetLayerGroup = null;
 var points = [];
 
-$(document).ready(function() {
+$(document).ready(function () {
 
 
 
@@ -88,13 +87,13 @@ $(document).ready(function() {
             contentType: "application/json; charset=utf-8",
             dataType: "jsonp",
             async: false,
-            success: function(data) {
-                if (data.entries.length == 0) {
+            success: function (data) {
+                if (data.entries.length === 0) {
                     alert("Vaya tela de barrio el tuyo, no hay " + topic);
                     return;
                 }
 
-                data.entries.forEach(function(element) {
+                data.entries.forEach(function (element) {
                     console.log(element);
                     new_marker = element.extensions.georss_where.gml_point.gml_pos.split(" ");
                     var point = L.marker([new_marker[0], new_marker[1]]).addTo(map).bindPopup(
@@ -107,27 +106,28 @@ $(document).ready(function() {
     }
 
     var options = {
-      enableHighAccuracy: true,
-      timeout: 5000,
-      maximumAge: 0
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 300000
     };
 
     navigator.geolocation.getCurrentPosition(
-        function(position) {
+        function (position) {
             lat = position.coords.latitude;
             lon = position.coords.longitude;
             console.log("lon " + lon);
 
-            $('#info_sup').html("<small><small>" + lat + ", " + lon + "</small></small>");
+            $('#info_sup').html("<small><small>" + lat.toFixed(2) + ", " + lon.toFixed(2) + "</small></small>");
             call('bar');
-            $("#que").on("change", function() {
+            $("#que").on("change", function () {
                 paint_markers(this.value, lat, lon, app_token, map);
             });
 
         },
-        function(error) {
+        function (error) {
             alert('OndeToi ERROR(' + error.code + '): ' + error.message);
-        }, options
+        },
+        options
 
     );
 
