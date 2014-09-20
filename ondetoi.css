@@ -51,15 +51,12 @@ section[role="region"] > header:first-child a:active,
 section[role="region"] > header:first-child a:hover  {
   background-color: #eefdff !important;
 }
+section[role="region"] > header:first-child > a:last-of-type { background-color: #cbe1e1 !important;}
 
-h1 {color: #00b8d6 !important}
-
-
-
-#que { width: 100%; height: 3em; background-color: #eefdff}
-
-
+h1 {color: #00b8d6 !important; padding: 0 1rem 0 5rem !important;}
 
 .icon-back {
 background-image: url('style/headers/images/icons/organic/back.png') !important;
 }
+
+#container {min-width: 320px; min-height:480;}

@@ -119,8 +119,8 @@ $(document).ready(function () {
 
             $('#info_sup').html("<small><small>" + lat.toFixed(2) + ", " + lon.toFixed(2) + "</small></small>");
             call('bar');
-            $("#que").on("change", function () {
-                paint_markers(this.value, lat, lon, app_token, map);
+            $(".option").on("click", function () {
+                paint_markers($(this).attr( "valor" ), lat, lon, app_token, map);
             });
 
         },
