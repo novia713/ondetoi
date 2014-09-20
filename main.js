@@ -38,7 +38,7 @@ $(document).ready(function () {
 
     function call(topic) {
         $('#container').empty();
-        $('#container').add('div').attr('id', 'mapa').empty().height(500);
+        $('#container').add('div').attr('id', 'mapa').empty().height('92%');
 
 
 
@@ -94,7 +94,7 @@ $(document).ready(function () {
                 }
 
                 data.entries.forEach(function (element) {
-                    console.log(element);
+                    //console.log(element);
                     new_marker = element.extensions.georss_where.gml_point.gml_pos.split(" ");
                     var point = L.marker([new_marker[0], new_marker[1]]).addTo(map).bindPopup(
                         "<a href='" + element.id + "' target='_new'>" + element.title + "</a><br><b>" + element.extensions.oos_telephone + "</b><br>" + element.extensions.oos_useraddress + "<i> (" + element.extensions.oos_subdependentlocality.name + ") </i>"
