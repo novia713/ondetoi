@@ -1,4 +1,4 @@
-html, body { font-size: 10px; margin: 0; padding: 0; background-color: #eefdff}
+html, body { font-size: 10px; margin: 0; padding: 0; background-color: #eefdff; height:100%}
 
 section[role="region"] > header:first-child {
     background: #cbe1e1;
@@ -59,5 +59,19 @@ h1 {color: #00b8d6 !important; padding: 0 1rem 0 5rem !important;}
 background-image: url('style/headers/images/icons/organic/back.png') !important;
 }
 
-#drawer {height: 100%}
-#container {min-width: 320px; min-height:480; 100%;}
+section[role="region"] {
+  height: 100%;
+  font: 2.2rem/1em "MozTT", Sans-serif;
+}
+
+div[role="main"] {
+  background-color: #eefdff;
+  height: 100%;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div[role="main"] p {
+  margin: 2rem 2.5rem;
+}

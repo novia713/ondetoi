@@ -1,40 +1,39 @@
+<!DOCTYPE html>
 <html>
 <head>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8">
-
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    
 <link href="style/headers.css" rel="stylesheet" type="text/css">
 <link href="style/drawer.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="style/buttons.css" />
 <link rel="stylesheet" href="style/value_selector.css">
 <link rel="stylesheet" href="style/style-embedded.css">
-
+<link rel="stylesheet" href="style/progress-activity.css">
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+ 
 
 <link rel="stylesheet" href="ondetoi.css">
  <!--[if lte IE 8]>
      <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
  <![endif]-->
 
-<!--
-<select id="que">
-    <option value="bar" selected>quiero tomar una cerveza</option>
-    <option value="banco">quiero un cajero para sacar dinero</option>
-    <option value="gimnasio">busco un gimnasio</option>
-    <option value="restaurante">tengo hambre</option>
-    <option value="whiskeria">necesito una copa</option>
-    <option value="farmacia">busco una farmacia</option>
-</select>
--->
-
+    
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<script src="main.js"></script>
 </head>
 <body>
-<article class="full frame drawer">
+
     <section data-type="sidebar">
       <header>
         <menu type="toolbar">
-          <a href="#content"><span class="icon icon-menu" style="padding-top: 20%;"><img src="icons/ondetoi/30.png"/></span></a>
+          <a href="#content">
+              <span class="icon icon-menu" style="padding-top: 20%;">
+                  <img src="icons/ondetoi/30.png"/>
+              </span>
+          </a>
         </menu>
         <h1>Busco <em>...</em></h1>
       </header>
@@ -53,7 +52,7 @@
     <section id="drawer" role="region">
       <header>
         <!-- <button><span class="icon">&nbsp;</span></button> -->
-        <a href="#content"><span class="icon icon-menu">hide sidebar</span></a>
+        <a href="#"><span class="icon icon-menu">hide sidebar</span></a>
         <a href="#drawer"><span class="icon icon-menu">show sidebar</span></a>
         <menu type="toolbar"><a href="about.html"><button data-icon="help"></button></a></menu>
         <menu type="toolbar"><a href="javascript:history.go(0);"><button data-icon="reload"></button></a></menu>
@@ -62,13 +61,9 @@
         <h1>Ondetoi?</h1>
       </header>
 
-      <div id="container" role="main"></div>
+      <div id="container" role="main">
+      </div>
     </section>
-</article>
-
-
-<script src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
-<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-<script src="main.js"></script>
+    
 </body>
 </html>

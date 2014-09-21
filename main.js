@@ -34,11 +34,11 @@ var points = [];
 
 $(document).ready(function () {
 
-
+    
 
     function call(topic) {
         $('#container').empty();
-        $('#container').add('div').attr('id', 'mapa').empty().height('92%');
+        $('#container').add('div').attr('id', 'mapa').empty().height('93%');
 
 
 
@@ -110,6 +110,11 @@ $(document).ready(function () {
         timeout: 10000,
         maximumAge: 300000
     };
+    
+    
+    
+    //runtime
+    $('#container').append("<progress></progress>");
 
     navigator.geolocation.getCurrentPosition(
         function (position) {
@@ -126,6 +131,10 @@ $(document).ready(function () {
         },
         function (error) {
             alert('OndeToi ERROR(' + error.code + '): ' + error.message);
+            $('progress').hide();
+            $('#container').prepend('<img id="theImg" src="icons/ondetoi/trollface.jpg" />');
+            $('#container').prepend('<p>Habilita la Geolocalización de tu teléfono en Ajustes, por favor ..</p>');
+            
         },
         options
 
