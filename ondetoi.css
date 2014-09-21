@@ -75,3 +75,5 @@ div[role="main"] {
 div[role="main"] p {
   margin: 2rem 2.5rem;
 }
+
+#cabecera-about { height:auto !important; }
