@@ -5,24 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8">
     
-<link href="style/headers.css" rel="stylesheet" type="text/css">
-<link href="style/drawer.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="style/buttons.css" />
-<link rel="stylesheet" href="style/value_selector.css">
-<link rel="stylesheet" href="style/style-embedded.css">
-<link rel="stylesheet" href="style/progress-activity.css">
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
- 
-
-<link rel="stylesheet" href="ondetoi.css">
- <!--[if lte IE 8]>
-     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
- <![endif]-->
-
     
-<script src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
-<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-<script src="main.js"></script>
+<script src="head.load.min.js"></script>
+<script>
+    head.load("http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js", 
+              "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js", 
+              "main.js"
+             );
+    head.load("style/headers.css",
+              "style/drawer.css",
+              "style/buttons.css",
+              "style/value_selector.css",
+              "style/style-embedded.css",
+              "style/progress-activity.css", 
+              "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css",
+              "ondetoi.css"
+             );
+</script>
 </head>
 <body>
 
